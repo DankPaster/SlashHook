@@ -993,11 +993,6 @@ namespace Settings
 		extern bool enabled;
 	}
 
-	namespace SniperCrosshair
-	{
-		extern bool enabled;
-	}
-
 	namespace AutoDefuse
 	{
 		extern bool enabled;
@@ -1024,12 +1019,6 @@ namespace Settings
 	{
 		extern bool enabled;
 		extern int team;
-	}
-
-	namespace ThirdPerson
-	{
-		extern bool enabled;
-		extern float distance;
 	}
 
 	namespace JumpThrow
