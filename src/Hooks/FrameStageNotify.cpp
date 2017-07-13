@@ -11,8 +11,7 @@ void Hooks::FrameStageNotify(void* thisptr, ClientFrameStage_t stage)
 	SkyBox::FrameStageNotify(stage);
 	ASUSWalls::FrameStageNotify(stage);
 	NoSmoke::FrameStageNotify(stage);
-	ThirdPerson::FrameStageNotify(stage);
-
+	
 	if (SkinChanger::forceFullUpdate)
 	{
 		GetLocalClient(-1)->m_nDeltaTick = -1;
