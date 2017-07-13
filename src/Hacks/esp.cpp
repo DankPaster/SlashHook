@@ -1330,7 +1330,7 @@ void ESP::Paint()
 
 		ClientClass* client = entity->GetClientClass();
 
-		if (client->m_ClassID == EClassIds::CCSPlayer && (Settings::ESP::Filters::enemies || Settings::ESP::Filters::allies || (Settings::ESP::Filters::localplayer && Settings::ThirdPerson::enabled)))
+		if (client->m_ClassID == EClassIds::CCSPlayer && (Settings::ESP::Filters::enemies || Settings::ESP::Filters::allies || (Settings::ESP::Filters::localplayer)))
 		{
 			C_BasePlayer* player = (C_BasePlayer*) entity;
 
