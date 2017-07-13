@@ -196,19 +196,7 @@ void Misc::RenderTab()
 				ImGui::SliderFloat(XORSTR("##MODELFOVAMOUNT"), &Settings::FOVChanger::viewmodelValue, 0, 360);
 				ImGui::PopItemWidth();
 			}
-			ImGui::Columns(1);
-			ImGui::Separator();
-			ImGui::Text(XORSTR("Third Person"));
-			ImGui::Separator();
-			ImGui::Columns(2, NULL, true);
-			{
-				ImGui::Checkbox(XORSTR("Enabled"), &Settings::ThirdPerson::enabled);
-			}
-			ImGui::NextColumn();
-			{
-				ImGui::PushItemWidth(-1);
-				ImGui::SliderFloat(XORSTR("##TPCAMOFFSET"), &Settings::ThirdPerson::distance, 0.f, 500.f, XORSTR("Camera Offset: %0.f"));
-				ImGui::PopItemWidth();
+			
 			}
 			ImGui::Columns(1);
 			ImGui::Separator();
@@ -405,7 +393,6 @@ void Misc::RenderTab()
 				ImGui::Checkbox(XORSTR("Autoblock"), &Settings::Autoblock::enabled);
 				ImGui::Checkbox(XORSTR("Jump Throw"), &Settings::JumpThrow::enabled);
 				ImGui::Checkbox(XORSTR("Auto Defuse"), &Settings::AutoDefuse::enabled);
-				ImGui::Checkbox(XORSTR("Sniper Crosshair"), &Settings::SniperCrosshair::enabled);
 				ImGui::Checkbox(XORSTR("Disable post-processing"), &Settings::DisablePostProcessing::enabled);
 			}
 			ImGui::NextColumn();
