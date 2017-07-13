@@ -511,6 +511,8 @@ void Settings::LoadDefaultsOrSave(std::string path)
 
 	settings[XORSTR("NoScopeBorder")][XORSTR("enabled")] = Settings::NoScopeBorder::enabled;
 
+	settings[XORSTR("SniperCrosshair")][XORSTR("enabled")] = Settings::SniperCrosshair::enabled;
+
 	settings[XORSTR("Autoblock")][XORSTR("enabled")] = Settings::Autoblock::enabled;
 	settings[XORSTR("Autoblock")][XORSTR("key")] = Settings::Autoblock::key;
 
@@ -526,6 +528,9 @@ void Settings::LoadDefaultsOrSave(std::string path)
 
 	settings[XORSTR("NameStealer")][XORSTR("enabled")] = Settings::NameStealer::enabled;
 	settings[XORSTR("NameStealer")][XORSTR("team")] = Settings::NameStealer::team;
+
+	settings[XORSTR("ThirdPerson")][XORSTR("enabled")] = Settings::ThirdPerson::enabled;
+	settings[XORSTR("ThirdPerson")][XORSTR("distance")] = Settings::ThirdPerson::distance;
 
 	settings[XORSTR("JumpThrow")][XORSTR("enabled")] = Settings::JumpThrow::enabled;
 	settings[XORSTR("JumpThrow")][XORSTR("key")] = Util::GetButtonName(Settings::JumpThrow::key);
@@ -1033,6 +1038,8 @@ void Settings::LoadConfig(std::string path)
 
 	GetVal(settings[XORSTR("NoScopeBorder")][XORSTR("enabled")], &Settings::NoScopeBorder::enabled);
 
+	GetVal(settings[XORSTR("SniperCrosshair")][XORSTR("enabled")], &Settings::SniperCrosshair::enabled);
+
 	GetVal(settings[XORSTR("Autoblock")][XORSTR("enabled")], &Settings::Autoblock::enabled);
 	GetButtonCode(settings[XORSTR("Autoblock")][XORSTR("key")], &Settings::Autoblock::key);
 
@@ -1048,7 +1055,10 @@ void Settings::LoadConfig(std::string path)
 
 	GetVal(settings[XORSTR("NameStealer")][XORSTR("enabled")], &Settings::NameStealer::enabled);
 	GetVal(settings[XORSTR("NameStealer")][XORSTR("team")], &Settings::NameStealer::team);
-	
+
+	GetVal(settings[XORSTR("ThirdPerson")][XORSTR("enabled")], &Settings::ThirdPerson::enabled);
+	GetVal(settings[XORSTR("ThirdPerson")][XORSTR("distance")], &Settings::ThirdPerson::distance);
+
 	GetVal(settings[XORSTR("JumpThrow")][XORSTR("enabled")], &Settings::JumpThrow::enabled);
 	GetButtonCode(settings[XORSTR("JumpThrow")][XORSTR("key")], &Settings::JumpThrow::key);
 
